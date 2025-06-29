@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OurSolutions from "../coman/Testimonial";
 import OurSolutions from "../coman/OurSolutions";
 import OurServices from "../coman/OurServices";
 import Industries from "../coman/Industries";
@@ -23,6 +24,7 @@ export default function Home() {
       <JoinUs />
       <ContactUs />
       <Followus />
+      <Testimonial />
     </div>
   );
 }
