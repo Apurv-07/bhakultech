@@ -1,6 +1,6 @@
 import Image from "next/image";
-import OurSolutions from "../coman/Testimonial";
-import OurSolutions from "../coman/OurSolutions";
+// import OurSolutions from "../coman/Testimonial";
+// import OurSolutions from "../coman/OurSolutions";
 import OurServices from "../coman/OurServices";
 import Industries from "../coman/Industries";
 import Excellence from "../coman/Excellence";
@@ -10,12 +10,17 @@ import JoinUs from "../coman/JoinUs";
 import ContactUs from "../coman/ContactUs";
 import Followus from "../coman/Followus";
 import Firstpage from "../coman/Firstpage";
+import Testimonials from "../coman/Testimonial";
+import Challenge from "@/components/Challenge";
+import DigitalVision from "@/components/DigitalVision";
 
 export default function Home() {
   return (
     <div className="w-full">
       <Firstpage />
-      <OurSolutions />
+      {/* <OurSolutions /> */}
+      <Challenge/>
+      <DigitalVision/>
       <OurServices />
       <Industries />
       <Excellence />
@@ -24,7 +29,8 @@ export default function Home() {
       <JoinUs />
       <ContactUs />
       <Followus />
-      <Testimonial />
+      <Testimonials />
+      
     </div>
   );
 }
