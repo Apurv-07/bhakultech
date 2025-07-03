@@ -16,7 +16,7 @@ const WhoWeAre = () => {
                 </div>
             </div>
             <div className='w-full max-h-[301.75px]'>
-                <Image src="/who-we.jpg" alt="about-us" className='w-full max-h-[301.75px]' width={1136} height={301.75} />
+                <Image src="/who-we.jpg" alt="about-us" className='w-full max-h-[301.75px] object-cover' width={1136} height={301.75} />
             </div>
         </div>
     )
