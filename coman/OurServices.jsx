@@ -60,7 +60,7 @@ const OurServices = () => {
             {images.map((img, index) => (
               <div key={index} className="px-2">
                 <img
-                  className="h-80 w-full object-contain transform hover:scale-105 transition duration-300"
+                  className="h-88 w-68 object-contain transform hover:scale-105 transition duration-300"
                   src={img}
                   alt={`Slide ${index + 1}`}
                 />
