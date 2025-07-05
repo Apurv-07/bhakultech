@@ -88,7 +88,7 @@ const Innovate = () => {
             className="w-full max-w-100 h-50"
             src={images[0]}
             alt=""
-            srcset=""
+            srcSet=""
           />
         </div>
 
@@ -112,7 +112,7 @@ const Innovate = () => {
             className="w-full max-w-100 h-50"
             src={images[1]}
             alt=""
-            srcset=""
+            srcSet=""
           />
         </div>
       </div>
