@@ -15,7 +15,7 @@ const DigitalVision = () => {
           <div className="border-0 p-4 rounded-4xl h-[96%] w-[80%]   bg-orange-400 ">
             <Image 
             height={50} width={50}
-              className="h-20 w-20 sm-h-10 text-amber-600"
+              className="h-13 w-13 sm-h-10 text-amber-600"
               src="/document-code.svg"
               alt=""
             />
@@ -30,9 +30,10 @@ const DigitalVision = () => {
           </div>
 
           <div className="border-0 p-4 rounded-4xl h-[96%] w-[80%]   bg-orange-400 ">
-            <img
-              className="h-20 w-20 sm-h-10 text-amber-600"
-              src="src/assets/dev-removebg-preview.png"
+            <Image 
+            height={50} width={50}
+              className="h-12 w-12 sm-h-10 text-amber-600"
+              src="/setting-5.svg"
               alt=""
             />
             
@@ -44,9 +45,10 @@ const DigitalVision = () => {
           </div>
 
           <div className="border-0 p-4 rounded-4xl h-[96%] w-[80%]   bg-orange-400 ">
-            <img
-              className="h-20 w-20 sm-h-10 text-amber-600"
-              src="src/assets/dev-removebg-preview.png"
+            <Image
+            height={50} width={50}
+              className="h-12 w-12 sm-h-10"
+              src="/data.svg"
               alt=""
             />
             <h1 className="text-xl text-gray-800 w-50">Al and Data Science</h1>
@@ -57,8 +59,8 @@ const DigitalVision = () => {
           </div>
           <div className="border-0 p-4 rounded-4xl h-[96%] w-[80%]   bg-orange-400 ">
             <img
-              className="h-20 w-20 sm-h-10 text-amber-600"
-              src="src/assets/dev-removebg-preview.png"
+              className="h-13 w-13 sm-h-10 text-amber-600"
+              src="/brush.svg"
               alt=""
             />
             <h1 className="text-xl text-gray-800 w-50">UX/Ul Design</h1>
@@ -68,9 +70,10 @@ const DigitalVision = () => {
             </p>
           </div>
           <div className="border-0 p-4 rounded-4xl h-[96%] w-[80%]   bg-orange-400 ">
-            <img
-              className="h-20 w-20 sm-h-10 text-amber-600"
-              src="src/assets/dev-removebg-preview.png"
+            <Image
+            height={50} width={50}
+              className="h-12 w-9 sm-h-10 text-amber-600"
+              src="/mobile.svg"
               alt=""
             />
             <h1 className="text-xl text-gray-800 w-50">
@@ -82,9 +85,10 @@ const DigitalVision = () => {
             </p>
           </div>
           <div className="border-0 p-4 rounded-4xl h-[96%] w-[80%]   bg-orange-400 ">
-            <img
-              className="h-20 w-20 sm-h-10 text-amber-600"
-              src="src/assets/dev-removebg-preview.png"
+            <Image
+            height={50} width={50}
+              className="h-12 w-12 sm-h-10"
+              src="/shapes.svg"
               alt=""
             />
             <h1 className="text-xl text-gray-800 w-50">

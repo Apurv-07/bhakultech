@@ -13,12 +13,12 @@ const Challenge = () => {
           <div className="border-0 p-4 rounded-2xl  ">
             <Image
             height={50} width={50}
-              className="h-20 w-30 sm-h-20"
+              className="h-13 w-13"
               src="/monitor.svg"
               alt=""
             />
-            <h1 className="text-white text-2xl ">Front-end</h1>
-            <p className="mt-5 ">
+            <h1 className="text-#ffff text-2xl w-82  mt-9">Front-end</h1>
+            <p className="mt-2 w-56">
               Our frontend developers understand the delicate balance between
               aesthetics and functionality
             </p>
@@ -26,12 +26,12 @@ const Challenge = () => {
           <div className="border-0 p-4 rounded-2xl  ">
             <Image
             height={50} width={50}
-              className="h-20 w-30 sm-h-20"
+              className="h-13 w-13" 
               src="/Backend.svg"
               alt=""
             />
-            <h1 className="text-white text-2xl">Back-end</h1>
-            <p className="mt-5 ">
+            <h1 className="text-text-#ffff  text-2xl mt-9">Back-end</h1>
+            <p className="mt-2 w-64 ">
               ur backend developers are the architects, f efficiency and
               security. They design and wild the databases andAPis
             </p>
@@ -39,12 +39,12 @@ const Challenge = () => {
           <div className="border-0 p-4 rounded-2xl  ">
             <Image
             height={50} width={50}
-              className="h-20 w-30 sm-h-20"
+              className="h-13 w-13"
               src="/driver.svg"
               alt=""
             />
-            <h1 className="text-white text-2xl">Data Analysts</h1>
-            <p className="mt-5 ">
+            <h1 className="text-#ffff  text-2xl mt-9">Data Analysts</h1>
+            <p className="mt-2   w-60  ">
               Our data analytics team is a blend of mathematicians,
               statisticians, and technology enthusiasts.
             </p>
