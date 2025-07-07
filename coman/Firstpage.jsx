@@ -38,7 +38,7 @@ const Firstpage = () => {
   };
 
   return (
-    <div className="bg-black w-full">
+    <div className="bg-black w-full p-16">
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-5 py-10">
         {/* Text  */}
         <div className="lg:w-1/2 w-full mt-10 lg:mt-0 p-4">

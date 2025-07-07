@@ -47,7 +47,6 @@ const Benefits = () => {
             </p>
           </div>
         </div>
-        
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-10 w-full max-w-[160px] md:max-w-full">
           <img src="/Logo Number.svg" alt="Logo 1" />

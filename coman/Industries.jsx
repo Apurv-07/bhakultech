@@ -26,48 +26,44 @@ const Industries = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
         },
       },
     ],
   };
 
   return (
-    <>
-      <div className="p-4 sm:p-8 md:p-16 bg-black text-white">
-        {/* Heading */}
-        <h1 className="text-3xl font-bold mt-4">Industries</h1>
+    <div className="max-w-[1440px] w-full mx-auto px-4 bg-[#000] md:px-[73px]">
+      <h1 className="text-5xl text-[#E6ECED]  font-medium ">Industries</h1>
 
-        {/* Paragraph */}
-        <p className="text-[18px] md:text-[24px] text-gray-400 mt-4">
-          We have rich experience in your industry. We also share insights
-          across industries to help you uncover new opportunities to adapt and
-          disrupt.
-        </p>
+      <p className="text-[18px] leading-[23.4px] md:text-[24px] text-[#A4A8A9] mt-4 max-w-[770px]">
+        We have rich experience in your industry. We also share insights across
+        industries to help you uncover new opportunities to adapt and disrupt.
+      </p>
 
-        <div className="w-full">
-          <Slider {...settings}>
-            {images.map((img, index) => (
-              <div key={index} className="px-2">
-                <img
-                  className="h-[850px] w-full object-contain transform hover:scale-105 transition duration-300 bg-cover"
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
+      {/* Slider */}
+      <div className="w-full mt-6">
+        <Slider {...settings}>
+          {images.map((img, index) => (
+            <div key={index} className="">
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className="h-[600px] w-[360px] mt-4 object-contain transform hover:scale-105 transition duration-300 rounded-xl"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    </>
+    </div>
   );
 };
 

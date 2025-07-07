@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import CountUp from "react-countup";
 
@@ -18,20 +18,28 @@ const Excellence = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 text-center gap-5 mt-5">
           <div>
             <h1 className="text-8xl font-bold text-zinc-400 ">
-              <CountUp start={0} end={20} />yrs
+              <CountUp start={0} end={20} />
+              yrs
             </h1>
             <p className="text-2xl mt-7">avg client tenure</p>
           </div>
           <div>
-            <h1 className="text-8xl font-bold text-zinc-400 "><CountUp start={0} end={80} /></h1>
+            <h1 className="text-8xl font-bold text-zinc-400 ">
+              <CountUp start={0} end={80} />
+            </h1>
             <p className="text-2xl mt-7">solutions delivered</p>
           </div>
           <div>
-            <h1 className="text-8xl font-bold text-zinc-400 "><CountUp start={0} end={60} />mn</h1>
+            <h1 className="text-8xl font-bold text-zinc-400 ">
+              <CountUp start={0} end={60} />
+              mn
+            </h1>
             <p className="text-2xl mt-7">daily digital journeys</p>
           </div>
           <div>
-            <h1 className="text-8xl font-bold text-zinc-400 "><CountUp start={0} end={200} />x</h1>
+            <h1 className="text-8xl font-bold text-zinc-400 ">
+              <CountUp start={0} end={200} />x
+            </h1>
             <p className="text-2xl mt-7">increase in operations growth</p>
           </div>
         </div>
