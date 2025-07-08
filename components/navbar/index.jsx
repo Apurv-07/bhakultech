@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/70 text-white font-['Inter'] text-sm tracking-wide">
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between h-10 sm:h-20 px-4 sm:px-8">
+      <div className="max-w-[1440px] mx-auto flex items-center justify-between h-10 sm:h-20 px-4 sm:px-8 dm:px-12 xl:px-16">
         {/* Logo or placeholder */}
         <div className="text-xl font-bold text-[#FF7800]">Logo</div>
 

@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <div className="font-['Inter']">
       <HeroSection />
-      <ChallengeSection/>
+      <ChallengeSection />
       <OurServices />
       <Excellence />
       <Testimonial />
-      <CompanyWork/>
+      <CompanyWork />
     </div>
   );
 }
