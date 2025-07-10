@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 
 const HeroSection = () => {
   const images = [
@@ -24,98 +24,54 @@ const HeroSection = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-        },
+        breakpoint: 1024,
+        settings: { slidesToShow: 4 },
       },
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
+        breakpoint: 768,
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 480,
+        settings: { slidesToShow: 2 },
       },
     ],
   };
 
   return (
     <>
-      <section className="relative w-full bg-black text-white overflow-hidden">
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32 relative z-10">
-          {/* Background Image */}
-          <Image
-            src="/bgImages/03b6f9ef40d26b445747cb2d74f0d2e25b890019.png"
-            alt="Hero background"
-            layout="fill"
-            objectFit="cover"
-            className="z-0 opacity-60"
-          />
-
-          {/* Content */}
-          <div className="relative z-10 max-w-2xl mt-24">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-gray-100">
-              Driving Innovation and <br /> Transformation
-            </h1>
-            <p className="mt-6 text-base sm:text-lg text-gray-300 leading-relaxed">
-              Harnessing emerging technologies and innovation to drive
-              transformation, shaping a connected, accessible and intelligent
-              future for the business world.
-            </p>
-
-            <button className="mt-8 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-white hover:text-orange-500 transition">
-              Explore More
-            </button>
-          </div>
-        </div>
-
-        {/* Partners Section */}
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-10">
-          <div className="text-center text-sm text-gray-300 uppercase font-medium mb-4">
-            Our Partners
-          </div>
-          <Slider {...settings}>
-            {images.map((img, idx) => (
-              <div key={idx} className="px-2">
-                <Image
-                  src={img}
-                  alt={`Partner ${idx + 1}`}
-                  width={144}
-                  height={96}
-                  className="object-contain mx-auto hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </section>
-
-      <div className="relative w-full max-w-[1440px] mx-auto">
+      <div className="relative w-full max-w-[1440px] mx-auto overflow-hidden">
+        {/* Background Image */}
         <img
           className="w-full h-auto object-cover"
           src="/bgImages/03b6f9ef40d26b445747cb2d74f0d2e25b890019.png"
+          alt="Background"
         />
 
-        {/* Content Overlay */}
-        <div className="absolute max-w-8xl mx-auto inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-12 xl:px-16  space-y-6 text-white -top-10 sm:top-0">
-          <h1 className="text-xl font-normal leading-tight max-w-xl md:text-4xl">
-            Driving Innovation and
-            <br />
-            Transformation
-          </h1>
+        {/* Overlay Content */}
+        <div className="absolute top-0 left-0 w-full h-full px-6 md:px-8 lg:px-10 flex flex-col justify-center space-y-8">
+          <div className="max-w-xl text-xl md:text-2xl xl:text-4xl font-medium leading-snug">
+            Driving Innovation and <br /> Transformation
+          </div>
+          <div className="hidden md:flex max-w-xl text-base md:text-md text-gray-400 leading-relaxed tracking-tight">
+            Harnessing emerging technologies and innovation to drive <br />
+            transformation, shaping a connected, accessible and <br />
+            intelligent future for the business world.
+          </div>
 
-          <p className="hidden sm:flex text-sm md:text-lg text-gray-300 max-w-sm xl:max-w-2xl">
-            Harnessing emerging technologies and innovation to drive
-            transformation, shaping a connected, accessible and intelligent
-            future for the business world.
-          </p>
-
-          <button className="bg-orange-500 text-white cursor-pointer px-4 md:px-6 py-2 md:py-3 rounded-lg text-sm font-normal w-fit transition">
-            Explore more
+          {/* CTA Button */}
+          <button className="hidden md:flex items-center gap-2 w-fit px-2 py-2 md:px-6 md:py-3 bg-orange-500 text-sm font-normal rounded-lg transition duration-300 cursor-pointer">
+            <Link href={"/contact"}>Explore more</Link>
+            <img
+              src="iconImages/849726bf2a372b12e002274293079733cf151d4d.png"
+              alt="arrow"
+              className="w-3 h-auto"
+            />
           </button>
         </div>
 
         {/* Pagination Dots */}
-        <div className="hidden sm:flex absolute bottom-36 w-full justify-center gap-2">
+        <div className="hidden xl:flex absolute bottom-20 xl:bottom-46 w-full justify-center gap-2">
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
@@ -127,88 +83,23 @@ const HeroSection = () => {
         </div>
 
         {/* Partners Section */}
-        <div className="max-w-8xl mx-auto bg-gradient-to-b from-black/0 to-black px-4">
-          <h2 className="text-center text-xs font-normal text-gray-300 uppercase">
-            OUR PARTNERS
-          </h2>
-
-          <div className="overflow-hidden">
-            <Slider {...settings}>
-              {images.map((img, index) => (
-                <div key={index} className="flex justify-center">
-                  <img
-                    className="h-12 md:h-16 w-24 sm:w-36  object-contain transform hover:scale-105 transition duration-300"
-                    src={img}
-                    alt={`Slide ${index + 1}`}
-                  />
-                </div>
-              ))}
-            </Slider>
+        <div className="absolute -bottom-5 w-full bg-gradient-to-b from-black/0 to-black py-6 px-6 md:px-8 lg:px-10">
+          <div className="text-center text-sm text-gray-300 font-normal md:font-medium uppercase mb-0 md:mb-4">
+            Our Partners
           </div>
+          <Slider {...settings}>
+            {images.map((img, index) => (
+              <div key={index} className="flex justify-center items-center">
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  className="h-10 w-18 md:h-15 md:w-23 xl:h-24 xl:w-36 object-contain transform hover:scale-105 transition duration-300 mx-auto"
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
-
-      {/* <div className="w-[1420px] h-[910.43px] relative">
-        <img
-          className="w-[1420px] h-[850.52px] left-0 top-0 absolute"
-          src="/bgImages/03b6f9ef40d26b445747cb2d74f0d2e25b890019.png"
-        />
-        <div className="w-[1420px] h-[910.43px] left-0 top-0 absolute overflow-hidden">
-          <div className="w-[586.49px] h-28 left-[73.96px] top-[222.61px] absolute">
-            <div className="w-96 h-24 left-0 top-[2.22px] absolute justify-center text-gray-200 text-4xl font-medium font-['Inter'] leading-[53.84px]">
-              Driving Innovation and
-              <br />
-              Transformation
-            </div>
-          </div>
-          <div className="w-[579.86px] h-20 left-[73.96px] top-[362.83px] absolute justify-center text-gray-300 text-xl font-normal font-['Libre_Franklin'] leading-7 tracking-tight">
-            Harnessing emerging technologies and innovation to drive
-            <br />
-            transformation, shaping a connected, accessible and
-            <br />
-            intelligent future for the business world.
-          </div>
-          <div className="w-[586.49px] h-12 left-[73.96px] top-[504.83px] absolute cursor-pointer">
-            <div className="w-40 h-12 left-0 top-0 absolute bg-orange-500 rounded-lg hover:bg-white  hover:text-orange-500">
-              <div className="w-24 h-4 left-[26.57px] top-[15.63px] absolute text-center justify-center  text-sm font-normal font-['Libre_Franklin'] leading-none">
-                Explore more
-              </div>
-              <img
-                className="w-2.5 h-3 left-[127.25px] top-[19.18px] absolute"
-                src="iconImages/849726bf2a372b12e002274293079733cf151d4d.png"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="w-[1420px] h-[1.48px] left-0 top-[686.33px] absolute">
-          <div className="w-4 h-0.5 left-[659.75px] top-0 absolute">
-            <div className="w-2 h-2 left-0 top-0 absolute bg-zinc-100 rounded-lg" />
-          </div>
-          <div className="w-2 h-2 left-[682.22px] top-0 absolute opacity-30 bg-zinc-100 rounded-lg" />
-          <div className="w-2 h-2 left-[698.77px] top-0 absolute opacity-30 bg-zinc-100 rounded-lg" />
-          <div className="w-2 h-2 left-[715.32px] top-0 absolute opacity-30 bg-zinc-100 rounded-lg" />
-          <div className="w-2 h-2 left-[731.86px] top-0 absolute opacity-30 bg-zinc-100 rounded-lg" />
-          <div className="w-2 h-2 left-[748.41px] top-0 absolute opacity-30 bg-zinc-100 rounded-lg" />
-        </div>
-        <div className="w-[1420px] h-28 left-0 top-[744.64px] absolute bg-gradient-to-b from-black/0 to-black">
-          <div className="w-30 h-4 left-[658.53px] top-[0.74px] absolute text-center justify-center text-gray-300 text-sm font-medium font-['Inter'] uppercase">
-            OUR PARTNERS
-          </div>
-          <div className="w-[1420px] h-20 left-0 top-[19.97px] absolute overflow-hidden">
-            <Slider {...settings}>
-              {images.map((img, index) => (
-                <div key={index}>
-                  <img
-                    className="h-24 w-36 left-[-19.61px] top-[-11.77px] object-contain transform hover:scale-105 transition duration-300"
-                    src={img}
-                    alt={`Slide ${index + 1}`}
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
