@@ -5,8 +5,8 @@ import { useInView } from "react-intersection-observer";
 
 const Excellence = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false, // 👈 Trigger every time in view
-    threshold: 0.3, // 👈 Adjust how much should be visible
+    triggerOnce: false,
+    threshold: 0.3,
   });
 
   return (
@@ -15,7 +15,7 @@ const Excellence = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="bgImages/background-3.jpg" // ✅ Your image path
+            src="bgImages/background-3.jpg"
             alt="Background"
             className="w-full h-full object-cover"
           />
