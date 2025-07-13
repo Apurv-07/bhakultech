@@ -44,7 +44,7 @@ export default function RootLayout({
       <body className="max-w-[1440px] mx-auto bg-black text-white font-inter">
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

@@ -26,10 +26,10 @@ const Excellence = () => {
         {/* Foreground Content */}
         <div
           ref={ref}
-          className="relative z-10 max-w-[1440px] mx-auto w-full px-6 md:px-8 lg:px-10 py-16 flex flex-col md:flex-row gap-12 md:gap-24"
+          className="relative z-10 max-w-[1440px] mx-auto w-full px-6 md:px-8 lg:px-10 py-8 md:py-16 flex flex-col md:flex-row gap-12 md:gap-24"
         >
           {/* Left Content */}
-          <div className="mb-6 max-w-xl">
+          <div className="max-w-xl">
             <h2 className="text-gray-200 text-xl md:text-2xl xl:text-4xl font-medium leading-tight">
               16 years of Delivering <br /> Excellence
             </h2>

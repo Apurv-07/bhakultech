@@ -80,8 +80,8 @@ const OurServices = () => {
 
   return (
     <>
-      <div className="w-full bg-neutral-950 text-white px-6 md:px-8 lg:px-10">
-        <div className="max-w-[1440px] mx-auto  py-16">
+      <div className="w-full bg-neutral-950 text-white px-6 md:px-8 lg:px-10 py-8 md:py-16">
+        <div className="max-w-[1440px] mx-auto">
           {/* Header and Slider Side by Side */}
           <div className="flex flex-col md:flex-row gap-12 items-start">
             {/* Text Section */}
@@ -123,7 +123,7 @@ const OurServices = () => {
           </div>
 
           {/* Services Card */}
-          <div className="mt-24 text-gray-200 ">
+          <div className="mt-12 md:mt-24 text-gray-200 ">
             <div className="flex items-center gap-4 mb-15 justify-center">
               <img
                 src="bgImages/Vector 6.svg"

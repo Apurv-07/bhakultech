@@ -83,7 +83,7 @@ const HeroSection = () => {
         </div>
 
         {/* Partners Section */}
-        <div className="absolute -bottom-5 w-full bg-gradient-to-b from-black/0 to-black py-6 px-6 md:px-8 lg:px-10">
+        <div className="absolute -bottom-5 w-full bg-gradient-to-b from-black/0 to-black py-6  md:px-8 lg:px-10">
           <div className="text-center text-sm text-gray-300 font-normal md:font-medium uppercase mb-0 md:mb-4">
             Our Partners
           </div>

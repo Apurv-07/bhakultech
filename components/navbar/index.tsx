@@ -10,9 +10,9 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About us", path: "/about" },
-    { name: "Services", path: "/Services" },
-    { name: "Company", path: "/Company" },
-    { name: "Careers", path: "/Careers" },
+    { name: "Services", path: "/services" },
+    { name: "Company", path: "/company" },
+    { name: "Careers", path: "/careers" },
   ];
 
   return (
@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 flex items-center justify-between h-10 md:h-20">
           {/* Logo */}
           <div className="text-xl md:text-2xl font-bold text-[#FF7800]">
-            <Link href={"/"}>Logo</Link>
+            <Link href={"/"}>BakhulTech</Link>
           </div>
 
           {/* Desktop Menu */}

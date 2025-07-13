@@ -39,7 +39,7 @@ const Challenge = () => {
         </div>
 
         {/* Content Section */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 py-16 flex flex-col items-center gap-12">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 py-8 md:py-16 flex flex-col items-center gap-12">
           {/* Heading */}
           <h2 className="text-xl md:text-2xl xl:text-4xl font-medium text-center font-Epilogue leading-[30px] max-w-5xl">
             We have multidisciplinary teams to meet any{" "}
@@ -47,7 +47,7 @@ const Challenge = () => {
           </h2>
 
           {/* Cards Section */}
-          <div className="w-full bg-stone-950 rounded-[35.39px] shadow-md px-6 py-10">
+          <div className="w-full bg-stone-950 rounded-[35.39px] shadow-md px-6 py-6">
             <div className="flex flex-col md:flex-row justify-center items-start lg:items-stretch gap-12">
               {teamData.map((team, idx) => (
                 <div key={idx} className="flex flex-col items-start gap-6 max-w-md mx-start">
