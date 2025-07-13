@@ -11,19 +11,20 @@ import Excellence from "../coman/Excellence";
 import Followus from "../coman/Followus";
 import Innovate from "../coman/Innovate";
 import Benefits from "../coman/Benefits";
+import Solveproblems from "../coman/Solveproblems"
 import ContactUssecond from "../coman/ContactUssecond"
 import Firstpage from "../coman/Firstpage";
 import Testimonials from "../coman/Testimonial";
 import Challenge from "@/components/Challenge";
-import DigitalVision from "@/components/DigitalVision";
+// import DigitalVision from "@/components/DigitalVision";
 
 export default function Home() {
   return (
     <div className="w-full">
       <Firstpage />
       {/* <OurSolutions /> */}
-      <Challenge/>
-      <DigitalVision/>
+      <Challenge />
+      {/* <DigitalVision/> */}
       <OurServices />
       {/* <Industries /> */}
       <Excellence />
@@ -32,11 +33,12 @@ export default function Home() {
       {/* <JoinUs /> */}
       {/* <ContactUs /> */}
       <Followus />
-       <Innovate/>
-       <Benefits/>
-       <ContactUssecond/>
+      <Solveproblems/>
+      <Innovate/>
+      <Benefits/>
+      <ContactUssecond />
       <Testimonials />
-     
+
     </div>
   );
 }

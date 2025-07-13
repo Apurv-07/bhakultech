@@ -1,30 +1,3 @@
-// import React from "react";
-// // import { Link } from "react-router-dom";
-// import Link from "next/link";
-// const Navbar = () => {
-//   return (
-//     <div className="bg-[#0A0A0A] max-w-[1440px] border border-red-500 mx-auto">
-//       <div className="fixed top-0 left-0 w-full z-50 bg-[#0A0A0A]">
-//         <div className="flex items-center justify-between px-6 py-4 max-w-[1280px] mx-auto">
-//           <div className="text-white font-bold">Logo</div>
-//           <div className="flex items-center space-x-6 text-white">
-//             <Link href="/Solutions">Solutions</Link>
-//             <Link href="/Services">Services</Link>
-//             <Link href="/Industries">Industries</Link>
-//             <Link href="/Company">Company</Link>
-//             <Link href="/Careers">Careers</Link>
-//           </div>
-//           <button className="bg-white text-black px-4 py-2 rounded-lg">
-//             Contact us
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -48,9 +21,9 @@ const Navbar = () => {
         <div className="text-[#FF7800] text-2xl font-bold">Logo</div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center w-full justify-end space-x-10">
+        <div className="hidden lg:flex items-center w-full justify-center space-x-10">
           {/* <ul className="flex items-center space-x-10 text-[16px]"> */}
-          <ul className="flex items-center space-x-10 mr-50 text-[16px]">
+          <ul className="flex items-center space-x-10  text-[16px]">
             {navItems.map((item) => (
               <li
                 key={item.name}
@@ -60,15 +33,23 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button className="ml-10 bg-white text-black rounded-lg hover:text-[#FF7800] w-24 h-8 transition cursor-pointer">
+          {/* <button
+            className="ml-10 bg-white md-flex sm-hidden
+          text-black rounded-lg hover:text-[#FF7800] w-24 h-8 transition cursor-pointer "
+          >
             Contact Us
-          </button>
+          </button> */}
         </div>
-
+        <button
+          className="ml-10 bg-white hidden
+  md:flex   w-24 h-8  justify-center text-center       text-black rounded-lg hover:text-[#FF7800] transition cursor-pointer "
+        >
+          Contact Us
+        </button>
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="lg:hidden text-2xl text-white focus:outline-none"
+          className="lg:hidden md:hidden text-2xl text-white focus:outline-none"
           aria-label="Toggle menu"
         >
           {click ? "×" : "☰"}
@@ -90,9 +71,11 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <button className="mt-4 bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-200 transition">
-              Contact Us
-            </button>
+            <div>
+              <button className="mt-4 bg-white text-black px-6 py-2  rounded-lg hover:bg-gray-200 transition">
+                Contact Us
+              </button>
+            </div>
           </ul>
         </div>
       )}
