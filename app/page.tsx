@@ -9,6 +9,8 @@ import Excellence from "../coman/Excellence";
 // import JoinUs from "../coman/JoinUs";
 // import ContactUs from "../coman/ContactUs";
 import Followus from "../coman/Followus";
+import Goalfocussed from "../coman/Goalfocussed";
+import  Theprocess from "../coman/Theprocess";
 import Innovate from "../coman/Innovate";
 import Benefits from "../coman/Benefits";
 import Solveproblems from "../coman/Solveproblems"
@@ -33,7 +35,9 @@ export default function Home() {
       {/* <JoinUs /> */}
       {/* <ContactUs /> */}
       <Followus />
-      <Solveproblems/>
+     
+      <Goalfocussed/>
+      < Theprocess/>
       <Innovate/>
       <Benefits/>
       <ContactUssecond />
