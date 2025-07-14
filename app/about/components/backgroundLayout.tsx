@@ -18,7 +18,7 @@ export default function BackgroundLayout({
             src="/bgImages/about-bg-1.png"
             alt="Background Ellipse 1"
             fill
-            className="object-cover object-left"
+            className="object-cover"
             priority
           />
         </div>
