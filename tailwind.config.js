@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],
         epilogue: ["var(--font-epilogue)", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
     },
   },

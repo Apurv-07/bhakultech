@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const OurServices = () => {
+export default function OurServices() {
   const settings = {
     dots: false,
     infinite: true,
@@ -153,6 +153,4 @@ const OurServices = () => {
       </div>
     </>
   );
-};
-
-export default OurServices;
+}

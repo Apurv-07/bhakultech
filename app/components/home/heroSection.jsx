@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const HeroSection = () => {
+export default function HeroSection() {
   const images = [
     "iconImages/aws.svg",
     "iconImages/oddo.svg",
@@ -40,7 +40,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="relative w-full max-w-[1440px] mx-auto overflow-hidden">
+      <div className="relative w-full max-w-[1440px] mx-auto overflow-hidden md:pb-0">
         {/* Background Image */}
         <img
           className="w-full h-auto object-cover"
@@ -50,7 +50,7 @@ const HeroSection = () => {
 
         {/* Overlay Content */}
         <div className="absolute top-0 left-0 w-full h-full px-6 md:px-8 lg:px-10 flex flex-col justify-center space-y-8">
-          <div className="max-w-xl text-xl md:text-2xl xl:text-4xl font-medium leading-snug">
+          <div className="max-w-xl text-xl md:tex-2xl xl:text-4xl font-medium leading-[30px]">
             Driving Innovation and <br /> Transformation
           </div>
           <div className="hidden md:flex max-w-xl text-base md:text-md text-gray-400 leading-relaxed tracking-tight">
@@ -84,7 +84,7 @@ const HeroSection = () => {
 
         {/* Partners Section */}
         <div className="absolute -bottom-5 w-full bg-gradient-to-b from-black/0 to-black py-6  md:px-8 lg:px-10">
-          <div className="text-center text-sm text-gray-300 font-normal md:font-medium uppercase mb-0 md:mb-4">
+          <div className="text-center text-xs text-gray-300 font-normal md:font-medium uppercase mb-2 md:mb-4">
             Our Partners
           </div>
           <Slider {...settings}>
@@ -93,7 +93,7 @@ const HeroSection = () => {
                 <img
                   src={img}
                   alt={`Slide ${index + 1}`}
-                  className="h-10 w-18 md:h-15 md:w-23 xl:h-24 xl:w-36 object-contain transform hover:scale-105 transition duration-300 mx-auto"
+                  className="h-12 w-20 md:h-15 md:w-23 xl:h-24 xl:w-36 object-contain transform hover:scale-105 transition duration-300 mx-auto"
                 />
               </div>
             ))}
@@ -102,6 +102,4 @@ const HeroSection = () => {
       </div>
     </>
   );
-};
-
-export default HeroSection;
+}

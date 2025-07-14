@@ -2,13 +2,3 @@
 @import "tailwindcss";
 
 
-
-.t-container {
-    width: 100%;
-    max-width: 1920px;
-    background: url(https://www.linkfields.com/backgroud-images/awards.jpg);
-    background-repeat: no-repeat; 
-    background-position: center;
-    background-size:cover; 
-
-}

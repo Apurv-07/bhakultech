@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Inter, Epilogue } from 'next/font/google';
+import { Inter, Epilogue, Poppins } from 'next/font/google';
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
 
@@ -16,15 +16,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const inter = Inter({ 
-  variable: "--font-inter", 
-  subsets: ["latin"] 
-});
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 const epilogue = Epilogue({ 
-  variable: "--font-epilogue", 
-  subsets: ["latin"] 
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: "--font-epilogue",
+  display: 'swap', 
 });
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 
 export const metadata: Metadata = {
@@ -39,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"
-    className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${epilogue.variable}`}
+    className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${epilogue.variable} ${poppins.variable}`}
     >
       <body className="max-w-[1440px] mx-auto bg-black text-white font-inter">
         <Navbar />

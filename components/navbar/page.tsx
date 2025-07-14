@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -14,6 +14,19 @@ export default function Navbar() {
     { name: "Company", path: "/company" },
     { name: "Careers", path: "/careers" },
   ];
+
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -44,18 +57,14 @@ export default function Navbar() {
           {/* Hamburger Menu Icon (Mobile) */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-[#0f0f0f] px-6 py-4">
+          <div className="md:hidden bg-[#0f0f0f] px-4 py-4">
             <ul className="flex flex-col text-start space-y-4 text-base">
               {navItems.map((item) => (
                 <li key={item.name}>

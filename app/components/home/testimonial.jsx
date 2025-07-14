@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Testimonials = () => {
+export default function Testimonials() {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [totalSlides, setTotalSlides] = useState(0);
@@ -211,6 +211,4 @@ const Testimonials = () => {
       </div>
     </>
   );
-};
-
-export default Testimonials;
+}

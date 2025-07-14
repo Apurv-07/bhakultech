@@ -25,7 +25,7 @@ const teamData = [
   },
 ];
 
-const Challenge = () => {
+export default function Challenge() {
   return (
     <>
       <div className="relative w-full overflow-hidden">
@@ -63,5 +63,3 @@ const Challenge = () => {
     </>
   );
 };
-
-export default Challenge;
