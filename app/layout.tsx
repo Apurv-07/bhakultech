@@ -54,7 +54,7 @@ export default function RootLayout({
     <html lang="en"
     className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${epilogue.variable} ${poppins.variable}`}
     >
-      <body className="max-w-[1440px] mx-auto bg-black text-white font-inter">
+      <body className="w-[1440px] mx-auto bg-black text-white font-inter">
         <Navbar />
         {children}
         <Footer />
