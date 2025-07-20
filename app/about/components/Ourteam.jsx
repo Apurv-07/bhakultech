@@ -216,7 +216,7 @@ const Ourteam = () => {
     <>
       <div className="w-full bg-white px-6 md:px-8 lg:px-10  ms-w-[483.688px] h-[281.337px] flex-shrink-0">
         {/* Header and Slider Side by Side */}
-        <div className="text-center font-[Poppins] text-[42.6px] font-semibold leading-[56.8px] text-[#282938] mt-[113px]  ">
+        <div className="text-center font-Poppins text-[42.6px] font-semibold leading-[56.8px] text-[#282938] mt-[113px]  ">
           <h1 className="text-center text-[#282938] font-[Poppins] mx-[500px] text-[42.6px] font-semibold leading-[56.8px]">
             Meet out team
           </h1>

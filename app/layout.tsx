@@ -1,8 +1,8 @@
 import "./globals.css";
-import fevicon from  "/fevicon.png";
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Inter, Epilogue, Poppins } from 'next/font/google';
+
+import { Inter, Epilogue, Poppins ,Geist_Mono , Geist} from 'next/font/google';
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
 
@@ -24,9 +24,8 @@ const inter = Inter({
 
 const epilogue = Epilogue({ 
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
   variable: "--font-epilogue",
-  display: 'swap', 
+  
 });
 
 const poppins = Poppins({
@@ -54,7 +53,7 @@ export default function RootLayout({
     <html lang="en"
     className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${epilogue.variable} ${poppins.variable}`}
     >
-      <body className="w-[1440px] mx-auto bg-black text-white font-inter">
+      <body className="max-w-[1440px] mx-auto bg-black text-white font-inter">
         <Navbar />
         {children}
         <Footer />
