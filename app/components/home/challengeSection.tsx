@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -41,7 +40,7 @@ export default function Challenge() {
         {/* Content Section */}
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10 py-8 md:py-16 flex flex-col items-center gap-12">
           {/* Heading */}
-          <h2 className="text-xl md:text-2xl xl:text-4xl font-medium text-center font-Epilogue leading-[30px] max-w-5xl">
+          <h2 className="text-xl md:text-2xl xl:text-4xl font-medium text-center font-epilogue leading-[30px] max-w-5xl">
             We have multidisciplinary teams to meet any{" "}
             <span className="text-orange-500">challenge.</span>
           </h2>
@@ -52,8 +51,8 @@ export default function Challenge() {
               {teamData.map((team, idx) => (
                 <div key={idx} className="flex flex-col items-start gap-6 max-w-md mx-start">
                   <img src={team.icon} alt={team.title} className="h-8 w-8 md:w-12 md:h-12" />
-                  <h3 className="text-xl md:2xl font-medium text-gray-200 font-Epilogue">{team.title}</h3>
-                  <p className="text-sm md:text-base text-gray-400 font-Epilogue">{team.description}</p>
+                  <h3 className="text-xl md:2xl font-medium text-gray-200 font-epilogue">{team.title}</h3>
+                  <p className="text-sm md:text-base text-gray-400 font-epilogue">{team.description}</p>
                 </div>
               ))}
             </div>

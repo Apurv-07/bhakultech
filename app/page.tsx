@@ -10,7 +10,7 @@ import CompanyWork from "./components/home/companyWork";
 export default function HomePage() {
   return (
     <>
-      <div className="font-['Inter']">
+      <div>
         <HeroSection />
         <ChallengeSection />
         <OurServices />

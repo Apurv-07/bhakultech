@@ -4,6 +4,7 @@ export default function GoalfocusSection() {
    const images = [
     "/sectionImages/about-goal-1.jpg",
   ];
+
     return (
         <>
   <div className="w-full py-16 text-gray-800 bg-transparent">
@@ -50,5 +51,5 @@ export default function GoalfocusSection() {
 
 
         </>
- )
+ );
 }

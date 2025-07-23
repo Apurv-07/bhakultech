@@ -1,7 +1,16 @@
+import BackgroundLayout from "./components/backgroundLayout";
+import OurPortfolio from "./components/ourPortfolio";
+import TemplateSection from "./components/templateSection";
+import TogetherSection from "./components/togetherSection";
+
 export default function ServicesPage() {
   return (
-    <div className="m-30">
-      <h1 className="text-3xl font-bold">Services</h1>
+    <div>
+      <BackgroundLayout>
+      <OurPortfolio />
+      <TemplateSection />
+      <TogetherSection />
+      </BackgroundLayout>
     </div>
   );
 }

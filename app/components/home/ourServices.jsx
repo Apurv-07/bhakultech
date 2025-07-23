@@ -76,8 +76,8 @@ export default function OurServices() {
 
   return (
     <>
-      <div className="w-full bg-neutral-950 text-white px-6 md:px-8 lg:px-10 py-8 md:py-16">
-        <div className="max-w-[1440px] mx-auto">
+      <div className="w-full bg-neutral-950 text-white  py-8 md:py-16">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-10">
           {/* Header and Slider Side by Side */}
           <div className="flex flex-col md:flex-row gap-12 items-start">
             {/* Text Section */}

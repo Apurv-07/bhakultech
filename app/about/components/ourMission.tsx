@@ -44,7 +44,7 @@ export default function OurMission () {
         />
       </div>
       <div className="w-full lg:w-1/2 space-y-4">
-        <h3 className="text-sm text-gray-800 font-medium font-poppinslg:text-left">
+        <h3 className="text-sm text-gray-800 font-medium font-poppins lg:text-left">
           Our Vision
         </h3>
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 font-semibold font-poppins leading-tight lg:text-left">

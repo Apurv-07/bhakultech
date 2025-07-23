@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubscribe = () => {
     if (!email || !email.includes("@")) {
@@ -11,18 +12,11 @@ export default function Footer() {
       return;
     }
 
-    // You can add your form submit logic here (API call or email service)
-    alert(`Subscribed with ${email}`);
+    setMessage(`Subscribed with ${email}`);
     setEmail("");
   };
 
-  type socialLink = {
-    name: string,
-    icon: string,
-    url: string,
-  };
-
-  const socialLinks: socialLink[] = [
+  const socialLinks = [
     {
       name: "Facebook",
       icon: "/iconImages/Facebook.svg",
@@ -60,11 +54,11 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bg-zinc-950 py-16 px-6 md:px-8 lg:px-10">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
-          
-          {/* Logo & Description */}
-          <div className="row-span-2  flex flex-col">
+      {/* 🔧 Top Footer */}
+      <div className="relative z-20 bg-zinc-950 py-16">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-8 lg:px-10">
+          {/* Brand Info */}
+          <div className="row-span-2 flex flex-col">
             <h2 className="text-amber-600 text-4xl font-semibold font-poppins">
               Bakhul Tech
             </h2>
@@ -77,49 +71,32 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Information */}
-          <div className="flex-col gap-[14px] hidden md:flex md:px-13">
-            <h3 className="text-white text-sm font-bold font-poppins ">
-              Information
-            </h3>
+          {/* Info Links */}
+          <div className="hidden md:flex flex-col gap-[14px] md:px-13">
+            <h3 className="text-white text-sm font-bold font-poppins">Information</h3>
             <ul className="text-white/80 text-xs font-poppins space-y-2">
-              <li>
-                <a href="/press-centre">Press Centre</a>
-              </li>
-              <li>
-                <a href="/blog">Our Blog</a>
-              </li>
-              <li>
-                <a href="/terms">Terms and Conditions</a>
-              </li>
+              <li><a href="/press-centre">Press Centre</a></li>
+              <li><a href="/blog">Our Blog</a></li>
+              <li><a href="/terms">Terms and Conditions</a></li>
             </ul>
           </div>
 
-          {/* Menu */}
-          <div className="flex-col gap-[14px] hidden md:flex md:px-13">
-            <h3 className="text-white text-sm font-bold font-poppins">
-              Menu
-            </h3>
+          {/* Menu Links */}
+          <div className="hidden md:flex flex-col gap-[14px] md:px-13">
+            <h3 className="text-white text-sm font-bold font-poppins">Menu</h3>
             <ul className="text-white/80 text-xs font-poppins space-y-2">
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/services">Services</a>
-              </li>
-              <li>
-                <a href="/team">Our Team</a>
-              </li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/team">Our Team</a></li>
             </ul>
           </div>
 
-          {/* Get In Touch */}
-          <div className="row-span-2 flex flex-col gap-2 ">
+          {/* Contact / Newsletter */}
+          <div className="row-span-2 flex flex-col gap-2">
             <h3 className="text-white text-xl font-semibold font-poppins mb-4">
               Get In Touch
             </h3>
 
-            {/* Social Links */}
             <div className="flex items-center gap-3 mb-4">
               {socialLinks.map((link) => (
                 <a
@@ -134,17 +111,17 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Newsletter */}
-            <p className="text-neutral-200 text-xs font-poppins mb-4">
+            <p className="text-neutral-200 text-xs font-poppins mb-2">
               Sign up for our newsletter
             </p>
+
             <div className="max-w-[250px] flex items-center bg-white rounded-full overflow-hidden">
               <input
                 type="email"
-                placeholder="Enter Your Email Here"
+                placeholder="Enter Your Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className=" flex-grow px-3 py-2 text-xs text-black/50 font-poppins outline-none"
+                className="flex-grow px-3 py-2 text-xs text-black/70 font-poppins outline-none"
               />
               <button
                 onClick={handleSubscribe}
@@ -153,47 +130,38 @@ export default function Footer() {
                 Subscribe
               </button>
             </div>
+
+            {message && (
+              <p className="text-green-400 text-xs mt-2 font-poppins">{message}</p>
+            )}
           </div>
 
-           {/* Contact */}
-          <div className="flex-col gap-[14px] hidden md:flex md:px-13">
-            <h3 className="text-white text-sm font-bold font-poppins">
-              Contact
-            </h3>
+          {/* Contact Info */}
+          <div className="hidden md:flex flex-col gap-[14px] md:px-13">
+            <h3 className="text-white text-sm font-bold font-poppins">Contact</h3>
             <div className="text-white/80 text-xs font-poppins space-y-2">
-              <p>
-                <strong>Phone:</strong> +123 456 789
-              </p>
-              <p>
-                <strong>Email:</strong> contact@example.com
-              </p>
+              <p><strong>Phone:</strong> +123 456 789</p>
+              <p><strong>Email:</strong> info@example.com</p>
             </div>
           </div>
 
-          {/* Company */}
-          <div className="flex-col gap-[14px] hidden md:flex md:px-13">
-            <h3 className="text-white text-sm font-bold font-poppins">
-              Company
-            </h3>
+          {/* Company Links */}
+          <div className="hidden md:flex flex-col gap-[14px] md:px-13">
+            <h3 className="text-white text-sm font-bold font-poppins">Company</h3>
             <ul className="text-white/80 text-xs font-poppins space-y-2">
-              <li>
-                <a href="/terms">Term & Conditions</a>
-              </li>
-              <li>
-                <a href="/privacy">Privacy Policy</a>
-              </li>
+              <li><a href="/terms">Terms & Conditions</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
       </div>
 
-      {/* Bottom Social Bar */}
-      <div className="hidden md:flex bg-blue-700 py-8 px-6 md:px-8 lg:px-10">
-        <div className="max-w-[1440px] mx-auto text-center lg:text-left w-full">
+      {/* 🔵 Bottom Social Bar */}
+      <div className="relative z-20 bg-blue-700 py-2">
+        <div className="max-w-[1440px] mx-auto text-center lg:text-left w-full px-6 md:px-8 lg:px-10">
           <h3 className="text-gray-100 text-2xl sm:text-3xl md:text-4xl font-semibold font-inter mb-6">
             Follow us for the latest updates
           </h3>
-
           <div className="flex flex-wrap justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-14 xl:gap-20">
             {socialCards.map((item) => (
               <a
@@ -224,4 +192,4 @@ export default function Footer() {
       </div>
     </>
   );
-}
+};

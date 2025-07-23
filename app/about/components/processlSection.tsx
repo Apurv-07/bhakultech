@@ -1,5 +1,4 @@
 "use client";
-
 export default function ProcessSection () {
      const images = [
     "/iconImages/Line-and-Icon.svg",
