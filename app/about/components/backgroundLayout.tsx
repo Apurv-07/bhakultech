@@ -20,6 +20,7 @@ export default function BackgroundLayout({
       {mounted && (
         <div className="absolute inset-0 -z-10 pointer-events-none" aria-hidden="true">
           <Image
+<<<<<<< HEAD
             src="/bgImages/about-ellipse-1.png"
             alt=""
             width={1600}
@@ -41,6 +42,12 @@ export default function BackgroundLayout({
             width={1600}
             height={800}
             className="absolute top-[1600px] left-1/2 -translate-x-1/2 object-contain w-full max-w-[1600px] h-auto"
+=======
+            src="/bgImages/about-bg-1.png"
+            alt="Background Ellipse 1"
+            fill
+            className="object-cover"
+>>>>>>> rajenda/code
             priority
           />
         </div>
